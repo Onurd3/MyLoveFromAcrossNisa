@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seni çok seviyorum Nisaa</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+
+  <div id="intro-screen">
+    <div class="intro-hearts" id="intro-hearts"></div>
+
+    <div class="intro-text" id="intro-text">
+      Nisa için hazırlanıyor...
+    </div>
+  </div>
+
+
+  <!-- =========================
+       MÜZİK
+  ========================= -->
+
+  <div id="music-player">
+
+    <div class="music-main">
+
+      <div class="music-cover"></div>
+
+      <div class="music-info">
+
+        <div class="music-title">
+          Kırmızı Reçete
+        </div>
+
+        <div class="music-artist">
+          Kum &amp; Sansar Salvo
+        </div>
+
+      </div>
+
+      <button
+        id="music-btn"
+        aria-label="Müziği aç/kapat"
+      >
+        ▶
+      </button>
+
+    </div>
+
+    <div class="progress-area">
+
+      <span class="time" id="current-time">
+        0:00
+      </span>
+
+      <input
+        type="range"
+        id="progress-bar"
+        min="0"
+        max="100"
+        value="0"
+        step="0.1"
+      />
+
+      <span class="time" id="duration">
+        0:00
+      </span>
+
+    </div>
+
+    <div class="music-bottom">
+
+      <div class="our-song">
+        bizim şarkımız ♡
+      </div>
+
+      <div
+        class="playing-text"
+        id="playing-text"
+      >
+        DURAKLATILDI
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <audio id="bg-music" loop>
+    <source
+      src="Kum & Sansar Salvo - Kırmızı Reçete (Official Music Video).mp3"
+      type="audio/mpeg"
+    />
+  </audio>
+
+
+  <!-- =========================
+       ARKA PLAN
+  ========================= -->
+
+  <div class="stars" id="stars"></div>
+
+  <div
+    class="background-hearts"
+    id="background-hearts"
+  ></div>
+
+  <div class="nebula" id="nebula">
+
+    <div class="nebula-blob"></div>
+
+    <div class="nebula-blob b2"></div>
+
+  </div>
+
+  <div class="heart-glow-ring"></div>
+
+  <div id="ui"></div>
+
+
+  <!-- =========================
+       AŞK SORUSU
+  ========================= -->
+
+  <div id="love-question">
+
+    <div class="question-box">
+
+      <div
+        class="question-face"
+        id="question-face"
+      >
+        ◕‿◕
+      </div>
+
+      <h1
+        class="question-title"
+        id="question-title"
+      >
+        Nisa, beni seviyor musun?
+      </h1>
+
+      <p
+        class="question-subtitle"
+        id="question-subtitle"
+      >
+        Cevabını dikkatli seç...
+      </p>
+
+      <div class="answer-area">
+
+        <button
+          class="answer-btn"
+          id="yes-btn"
+        >
+          Evet ❤️
+        </button>
+
+        <button
+          class="answer-btn"
+          id="no-btn"
+        >
+          Hayır
+        </button>
+
+      </div>
+
+      <div id="message"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       FINAL MESAJ
+  ========================= -->
+
+  <div id="final-message">
+
+    <div
+      class="final-small"
+      id="final-small"
+    >
+      Biliyordum...
+    </div>
+
+    <div class="final-big">
+      NİSA ❤️
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       ZAMAN SAYACI
+  ========================= -->
+
+  <div id="time-counter">
+
+    <div class="tc-label">
+      bizim zamanımız
+    </div>
+
+    <div class="tc-values">
+
+      <div class="tc-unit">
+
+        <span
+          class="tc-num"
+          id="tc-days"
+        >
+          0
+        </span>
+
+        <span class="tc-tag">
+          gün
+        </span>
+
+      </div>
+
+      <div class="tc-unit">
+
+        <span
+          class="tc-num"
+          id="tc-hours"
+        >
+          00
+        </span>
+
+        <span class="tc-tag">
+          sa
+        </span>
+
+      </div>
+
+      <div class="tc-unit">
+
+        <span
+          class="tc-num"
+          id="tc-mins"
+        >
+          00
+        </span>
+
+        <span class="tc-tag">
+          dk
+        </span>
+
+      </div>
+
+      <div class="tc-unit">
+
+        <span
+          class="tc-num"
+          id="tc-secs"
+        >
+          00
+        </span>
+
+        <span class="tc-tag">
+          sn
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       KÖŞE BUTONLARI
+  ========================= -->
+
+  <button
+    class="corner-btn"
+    id="memories-btn"
+  >
+    ♡ Anılarımız
+  </button>
+
+  <button
+    class="corner-btn"
+    id="letter-btn"
+  >
+    💌 Sana bir mektup var
+  </button>
+
+  <button
+    class="corner-btn"
+    id="game-btn"
+  >
+    🎮 Küçük Oyun
+  </button>
+
+  <button
+    class="corner-btn"
+    id="reasons-btn"
+  >
+    🌹 Sana 10 Sebep
+  </button>
+
+
+  <!-- =========================
+       ANILAR
+  ========================= -->
+
+  <div id="memories-overlay">
+
+    <button
+      class="overlay-close"
+      id="memories-close"
+    >
+      ×
+    </button>
+
+    <h2 class="overlay-title">
+      ♡ Anılarımız
+    </h2>
+
+    <div class="memories-grid">
+
+      <div class="memory-card">
+
+        <div class="memory-photo">
+          📷
+        </div>
+
+        <div class="memory-caption">
+          İlk konuştuğumuz zaman
+        </div>
+
+      </div>
+
+
+      <div class="memory-card">
+
+        <div class="memory-photo">
+          📷
+        </div>
+
+        <div class="memory-caption">
+          İlk buluşmamız
+        </div>
+
+      </div>
+
+
+      <div class="memory-card">
+
+        <div class="memory-photo">
+          📷
+        </div>
+
+        <div class="memory-caption">
+          Unutamadığım gün
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       MEKTUP
+  ========================= -->
+
+  <div id="letter-overlay">
+
+    <button
+      class="overlay-close"
+      id="letter-close"
+    >
+      ×
+    </button>
+
+    <div
+      class="envelope"
+      id="envelope"
+    >
+
+      <div class="envelope-body"></div>
+
+      <div
+        class="envelope-flap"
+        id="envelope-flap"
+      ></div>
+
+    </div>
+
+    <div
+      class="letter-paper"
+      id="letter-paper"
+    >
+
+      Nisa, buraya ne yazmalıyım diye çok düşündüm..
+
+      <br><br>
+
+      ()
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       OYUN
+  ========================= -->
+
+  <div id="game-overlay">
+
+    <button
+      class="overlay-close"
+      id="game-close"
+    >
+      ×
+    </button>
+
+    <h2 class="overlay-title">
+      Nisa için 10 kalp yakala ❤️
+    </h2>
+
+    <div id="game-area"></div>
+
+    <div id="game-score">
+      Yakalanan: 0 / 10
+    </div>
+
+    <div id="game-win-message">
+
+      Hepsini yakaladın.
+      Çünkü sen benim kalbimi zaten çoktan aldın.
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       🌹 10 SEBEP
+  ========================= -->
+
+  <div id="reasons-overlay">
+
+    <button
+      class="overlay-close"
+      id="reasons-close"
+    >
+      ×
+    </button>
+
+    <div class="reasons-container">
+
+      <h2 class="overlay-title">
+        🌹 Sana 10 Sebep
+      </h2>
+
+      <div class="reasons-intro">
+        Seni neden sevdiğimi anlatmak için
+        10 sebep seçtim...
+      </div>
+
+      <div
+        class="reason-card"
+        id="reason-card"
+      >
+
+        <div
+          class="reason-number"
+          id="reason-number"
+        >
+          01 / 10
+        </div>
+
+        <div class="reason-heart">
+          ♡
+        </div>
+
+        <div
+          class="reason-text"
+          id="reason-text"
+        >
+          Yanında kendim gibi hissedebildiğim için.
+        </div>
+
+      </div>
+
+      <div
+        class="reason-progress"
+        id="reason-progress"
+      ></div>
+
+      <div class="reason-buttons">
+
+        <button
+          class="reason-nav-btn"
+          id="reason-prev"
+        >
+          ← Önceki
+        </button>
+
+        <button
+          class="reason-nav-btn reason-next"
+          id="reason-next"
+        >
+          Sonraki →
+        </button>
+
+      </div>
+
+      <div
+        class="reason-final"
+        id="reason-final"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
